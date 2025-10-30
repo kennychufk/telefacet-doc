@@ -1,0 +1,83 @@
+# Example configuration file for multi-camera WebSocket client
+# Save this file and drag it into the browser to load the configuration
+
+# List of WebSocket servers (Raspberry Pi 5 devices)
+servers:
+  - address: ws://192.168.0.100:9001
+  - address: ws://192.168.0.101:9001
+  - address: ws://192.168.0.102:9001
+  - address: ws://192.168.0.103:9001
+  - address: ws://192.168.0.104:9001
+  - address: ws://192.168.0.105:9001
+  - address: ws://192.168.0.106:9001
+  - address: ws://192.168.0.107:9001
+  - address: ws://192.168.0.108:9001
+  - address: ws://192.168.0.109:9001
+  - address: ws://192.168.0.110:9001
+  - address: ws://192.168.0.111:9001
+  - address: ws://192.168.0.112:9001
+  - address: ws://192.168.0.113:9001
+  - address: ws://192.168.0.114:9001
+  - address: ws://192.168.0.115:9001
+
+# Camera configuration (same for all cameras)
+camera_config:
+  width: 1456
+  height: 1088
+  crop_width: 1456
+  crop_height: 1088
+  crop_left: 0
+  crop_top: 0
+  v4l2_buffers: 4
+
+# Frame saving configuration
+frame_saving:
+  # mode: checkerboard          # Options: none, buffer, batch
+  # output_dir: /home/dic/workspace/dataWs/calib-2Hz-3ms
+  # mode: batch          # Options: none, buffer, batch
+  # output_dir: /home/dic/workspace/dataWs/toy10-50Hz-8ms
+  mode: none          # Options: none, buffer, batch
+  output_dir: /home/dic/workspace/dataWs/toy10
+  prepend_timestamp_to_dir: true
+  batch_size: 10
+  writer_threads: 4
+  checkerboard_rows: 11
+  checkerboard_cols: 8
+  checkerboard_full_res_detection: false
+  checkerboard_num_threads: 4
+
+# AWB (Auto White Balance) gains for each camera
+# Camera IDs are assigned based on server order and discovery order
+awb_gains:
+  cam0: { r: 2.2, g: 1.0, b: 2.0 }
+  cam1: { r: 2.2, g: 1.0, b: 2.0 }
+  cam2: { r: 2.2, g: 1.0, b: 2.0 }
+  cam3: { r: 2.2, g: 1.0, b: 2.0 }
+  cam4: { r: 2.2, g: 1.0, b: 2.0 }
+  cam5: { r: 2.2, g: 1.0, b: 2.0 }
+  cam6: { r: 2.2, g: 1.0, b: 2.0 }
+  cam7: { r: 2.2, g: 1.0, b: 2.0 }
+  cam8: { r: 2.2, g: 1.0, b: 2.0 }
+  cam9: { r: 2.2, g: 1.0, b: 2.0 }
+  cam10: { r: 2.2, g: 1.0, b: 2.0 }
+  cam11: { r: 2.2, g: 1.0, b: 2.0 }
+  cam12: { r: 2.2, g: 1.0, b: 2.0 }
+  cam13: { r: 2.2, g: 1.0, b: 2.0 }
+  cam14: { r: 2.2, g: 1.0, b: 2.0 }
+  cam15: { r: 2.2, g: 1.0, b: 2.0 }
+  cam16: { r: 2.2, g: 1.0, b: 2.0 }
+  cam17: { r: 2.2, g: 1.0, b: 2.0 }
+  cam18: { r: 2.2, g: 1.0, b: 2.0 }
+  cam19: { r: 2.2, g: 1.0, b: 2.0 }
+  cam20: { r: 2.2, g: 1.0, b: 2.0 }
+  cam21: { r: 2.2, g: 1.0, b: 2.0 }
+  cam22: { r: 2.2, g: 1.0, b: 2.0 }
+  cam23: { r: 2.2, g: 1.0, b: 2.0 }
+  cam24: { r: 2.2, g: 1.0, b: 2.0 }
+  cam25: { r: 2.2, g: 1.0, b: 2.0 }
+  cam26: { r: 2.2, g: 1.0, b: 2.0 }
+  cam27: { r: 2.2, g: 1.0, b: 2.0 }
+  cam28: { r: 2.2, g: 1.0, b: 2.0 }
+  cam29: { r: 2.2, g: 1.0, b: 2.0 }
+  cam30: { r: 2.2, g: 1.0, b: 2.0 }
+  cam31: { r: 2.2, g: 1.0, b: 2.0 }
